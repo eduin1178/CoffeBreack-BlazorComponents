@@ -1,0 +1,35 @@
+﻿@page "/counter"
+
+<h1>Counter</h1>
+
+<p>Current count: @currentCount</p>
+
+<button class="btn btn-primary" @onclick="IncrementCount">Click me</button>
+
+<TabContainer>
+    <Headers>
+        <TabHeader Title="Hola" Id="hola" CssActive="true"></TabHeader>
+        <TabHeader Title="Mundo" Id="mundo"></TabHeader>
+    </Headers>
+    <Contents>
+        <TabContent CssActive="true" Id="hola">
+            <Content>
+                <p>Hola</p>
+            </Content>
+        </TabContent>
+        <TabContent Id="mundo">
+            <Content>
+                <p>Mundo</p>
+            </Content>
+        </TabContent>
+    </Contents>
+</TabContainer>
+
+@code {
+    private int currentCount = 0;
+
+    private void IncrementCount()
+    {
+        currentCount++;
+    }
+}

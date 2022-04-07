@@ -1,0 +1,16 @@
+﻿<ul class="nav nav-tabs" id="myTab" role="tablist">
+    @Headers
+</ul>
+<div class="tab-content" id="myTabContent">
+    @Contents
+</div>
+
+@code {
+
+
+    [Parameter]
+    public RenderFragment Headers { get; set; }
+
+    [Parameter]
+    public RenderFragment Contents { get; set; }
+}

@@ -1,0 +1,19 @@
+﻿<li class="nav-item" role="presentation">
+    <a class="nav-link @(CssActive?"active":"")" id="contact-tab" 
+       data-toggle="tab" href="#@Id" 
+       role="tab" 
+       aria-controls="contact" 
+       aria-selected="@(CssActive?"true":"false")">@Title</a>
+</li>
+
+@code {
+
+    [Parameter]
+    public string Title { get; set; }
+
+    [Parameter]
+    public string Id { get; set; }
+
+    [Parameter]
+    public bool CssActive { get; set; }
+}
